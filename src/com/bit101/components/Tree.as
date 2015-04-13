@@ -2,8 +2,6 @@
  * Created by Mr.zheng on 15-2-13.
  */
 package com.bit101.components{
-import com.bit101.components.List;
-
 import flash.display.DisplayObjectContainer;
 import flash.events.Event;
 import flash.events.MouseEvent;
