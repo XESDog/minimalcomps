@@ -158,7 +158,7 @@ public class List extends Component {
         else {
             _scrollbar.value = 0;
         }
-//        fillItems();
+        fillItems();
     }
 
 
@@ -385,6 +385,7 @@ public class List extends Component {
      */
     public function set items(value:Array):void {
         _items = value;
+        makeListItems();
         invalidate();
     }
 

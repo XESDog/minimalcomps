@@ -5,12 +5,30 @@ package com.bit101.components{
 import com.bit101.components.List;
 
 import flash.display.DisplayObjectContainer;
+import flash.events.Event;
+import flash.events.MouseEvent;
 
 public class Tree extends List {
     public function Tree(parent:DisplayObjectContainer = null, xpos:Number = 0, ypos:Number = 0, items:Array = null) {
         super(parent, xpos, ypos, items);
         listItemClass=TreeItem;
         autoHideScrollBar=true;
+    }
+
+    override protected function init():void {
+        super.init();
+        setSize(100, 100);
+        addEventListener(MouseEvent.MOUSE_WHEEL, onMouseWheel);
+        addEventListener(Event.RESIZE, onResize);
+        addEventListener(Event.SELECT, function (e) {
+            if(selectedItem.isExpand){
+                collapse(selectedItem);
+            }else{
+                expand(selectedItem);
+            }
+        });
+        makeListItems();
+        fillItems();
     }
 
     /**

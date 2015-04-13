@@ -61,7 +61,7 @@ public class ItemData {
         for(var i:int=0;i<len;i++){
             x = xl[i];
             item=packItemData(x,parent,depth);
-            a.push(a);
+            a.push(item);
         }
         return a;
 
