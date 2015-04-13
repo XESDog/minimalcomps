@@ -43,5 +43,28 @@ public class ItemData {
         }
         return false;
     }
+
+    /**
+     * 根据xml生成items
+     * @param xml
+     * @return
+     * @param parent
+     * @param depth
+     */
+    public static function parseXml(xml:XML,parent=null,depth=0):Array {
+
+        var a:Array = [];
+        var xl:XMLList=xml.children();
+        var item:ItemData;
+        var len:int=xl.length();
+        var x:XML;
+        for(var i:int=0;i<len;i++){
+            x = xl[i];
+            item=packItemData(x,parent,depth);
+            a.push(a);
+        }
+        return a;
+
+    }
 }
 }
