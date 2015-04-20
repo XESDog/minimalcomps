@@ -90,7 +90,7 @@ public class List extends Component {
     }
 
     /**
-     * Creates all the list items based on data.
+     * Creates all the list items based on consts.
      */
     protected function makeListItems():void {
         var item:ListItem;
